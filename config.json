@@ -1,0 +1,30 @@
+{
+  "artist": {
+    "name": "Laurin.",
+    "spotify_id": "1a9C2omo10kDc5F6UIW4gV",
+    "instagram": ""
+  },
+  "track": {
+    "title": "wann sehen wir uns wieder?",
+    "spotify_id": "0yYpnpuC1tMqjxgXjMV0Vj",
+    "released": "2026-09-10",
+    "duration_s": 95
+  },
+  "links": {
+    "apple_music": "",
+    "youtube": "",
+    "youtube_video_id": "",
+    "soundcloud": "",
+    "bandcamp": "",
+    "itunes": "",
+    "community_playlist": ""
+  },
+  "kit": {
+    "url": "https://jul352mf.github.io/laurin-fan-kit/",
+    "repo": "Jul352mf/laurin-fan-kit"
+  },
+  "sampler": {
+    "spotify_monthly_listeners": true,
+    "github_stars": true
+  }
+}

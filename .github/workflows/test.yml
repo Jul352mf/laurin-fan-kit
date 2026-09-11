@@ -1,0 +1,15 @@
+name: test
+on:
+  push:
+    paths: ["tools/**", ".github/workflows/test.yml"]
+  pull_request:
+    paths: ["tools/**"]
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+      - run: uv run --directory tools/fanops --group dev pytest -q

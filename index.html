@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wann sehen wir uns wieder?</title>
+<meta name="description" content="Fan-Kit für „wann sehen wir uns wieder?“ von Laurin. Was ein Fan in fünf Minuten tun kann, damit ein erstes Lied gehört wird.">
+<meta property="og:title" content="wann sehen wir uns wieder? · Fan-Kit">
+<meta property="og:description" content="Ein Freund hat sein erstes Lied veröffentlicht. So hilfst du in fünf Minuten wirklich.">
+<meta property="og:image" content="https://jul352mf.github.io/laurin-fan-kit/assets/cover.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231E7A46'/%3E%3Ctext x='16' y='22' font-family='Arial Black,Arial' font-size='16' font-weight='900' fill='white' text-anchor='middle'%3EU4%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+:root{
+  --ground:#ECEEE9; --plate:#FBFBF8; --ink:#17191A; --muted:#5E6660;
+  --u4:#1E7A46; --u4-ink:#FFFFFF; --ivy:#163B29; --spray:#D63A9C; --rail:#CF2E2E;
+  --line:#C9CDC6; --shadow:0 1px 0 rgba(23,25,26,.08), 0 8px 24px -12px rgba(22,59,41,.25);
+  --display:"Archivo Black","Arial Black",Impact,sans-serif;
+  --body:"Atkinson Hyperlegible","Segoe UI",system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#121614; --plate:#1B211D; --ink:#ECEDE8; --muted:#9AA39C;
+    --u4:#3FA36B; --u4-ink:#0E1A13; --ivy:#8CCBA8; --spray:#E86BBE; --rail:#E85A5A;
+    --line:#2C332E; --shadow:0 1px 0 rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#121614; --plate:#1B211D; --ink:#ECEDE8; --muted:#9AA39C;
+  --u4:#3FA36B; --u4-ink:#0E1A13; --ivy:#8CCBA8; --spray:#E86BBE; --rail:#E85A5A;
+  --line:#2C332E; --shadow:0 1px 0 rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;padding-inline:16px;padding-block:0 64px}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:640px;margin:0 auto}
+[hidden]{display:none!important}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px 10px;font-size:13px;color:var(--muted)}
+.top .brand{display:flex;align-items:center;gap:8px;letter-spacing:.06em;text-transform:uppercase;font-weight:700}
+.top .brand i{display:inline-grid;place-items:center;width:26px;height:26px;background:var(--u4);color:var(--u4-ink);font-family:var(--display);font-style:normal;font-size:12px;letter-spacing:0}
+.lang{display:flex;gap:2px;border:1px solid var(--line);background:var(--plate)}
+.lang button{all:unset;cursor:pointer;padding:4px 10px;font-weight:700;letter-spacing:.06em;font-size:12px;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--plate)}
+.lang button:focus-visible{outline:2px solid var(--spray);outline-offset:-2px}
+
+/* hero: the station sign */
+.hero{background:var(--plate);box-shadow:var(--shadow)}
+.hero img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.sign{border-top:6px solid var(--u4)}
+.sign .line{display:flex;align-items:center;gap:10px;background:var(--u4);color:var(--u4-ink);padding:6px 14px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.sign .line b{font-family:var(--display);font-weight:400;font-size:14px;letter-spacing:0;text-transform:none}
+.sign h1{margin:0;padding:18px 16px 6px;font-family:var(--display);font-weight:400;font-size:clamp(28px,7.2vw,44px);line-height:1.05;letter-spacing:-.01em;text-wrap:balance}
+.sign .by{padding:0 16px 18px;color:var(--muted);font-size:15px}
+.sign .by strong{color:var(--ink)}
+
+.intro{padding-block:28px 8px;font-size:19px;line-height:1.5;max-width:60ch}
+.intro em{font-style:normal;background:linear-gradient(transparent 62%,color-mix(in srgb,var(--spray) 28%,transparent) 62%)}
+
+/* plates */
+.plates{display:grid;gap:14px;margin-top:18px}
+.plate{background:var(--plate);box-shadow:var(--shadow);padding:18px 18px 20px;display:grid;gap:12px}
+.plate header{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.plate h2{margin:0;font-family:var(--display);font-weight:400;font-size:22px;line-height:1.1;letter-spacing:-.005em}
+.plate .arrow{font-family:var(--display);color:var(--u4);font-size:22px;line-height:1}
+.plate p{margin:0;color:var(--ink)}
+.plate p.hint{color:var(--muted);font-size:15px}
+.plate.warn{border-left:6px solid var(--rail);padding-left:16px}
+.plate.warn h2{color:var(--rail)}
+.plate.board{border-left:6px solid var(--spray);padding-left:16px}
+
+.steps{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.steps li::marker{font-weight:700;color:var(--u4)}
+
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 16px;background:var(--ink);color:var(--plate);text-decoration:none;font-weight:700;font-size:16px;border:2px solid var(--ink);cursor:pointer;font-family:var(--body);line-height:1.1;flex:1 1 auto;text-align:center}
+.btn:hover{background:var(--ivy);border-color:var(--ivy);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ground);color:var(--ink)}
+.btn.spray{background:var(--spray);border-color:var(--spray);color:#fff}
+.btn.spray:hover{filter:brightness(.92);background:var(--spray);border-color:var(--spray)}
+.btn:focus-visible{outline:3px solid var(--spray);outline-offset:2px}
+.btn svg{width:18px;height:18px;flex:none}
+.small{font-size:13px;color:var(--muted)}
+.small a{color:var(--muted)}
+
+/* checklist */
+.check{display:grid;gap:8px}
+.check label{display:flex;align-items:center;gap:12px;padding:10px 12px;border:1px solid var(--line);cursor:pointer;user-select:none}
+.check input{appearance:none;width:22px;height:22px;border:2px solid var(--ink);background:var(--plate);display:grid;place-items:center;flex:none;cursor:pointer}
+.check input:checked{background:var(--spray);border-color:var(--spray)}
+.check input:checked::after{content:"";width:12px;height:6px;border-left:3px solid #fff;border-bottom:3px solid #fff;transform:translateY(-2px) rotate(-45deg)}
+.check input:focus-visible{outline:3px solid var(--spray);outline-offset:2px}
+.check label:has(input:checked){border-color:var(--spray)}
+.check label:has(input:checked) span{text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--ink) 40%,transparent)}
+.tally{display:flex;align-items:baseline;gap:10px;font-variant-numeric:tabular-nums}
+.tally b{font-family:var(--display);font-weight:400;font-size:34px;line-height:1;color:var(--spray)}
+
+footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:grid;gap:6px}
+footer a{color:var(--muted)}
+
+@media (prefers-reduced-motion:no-preference){
+  .btn{transition:background .15s,border-color .15s,color .15s}
+  .check input{transition:background .12s,border-color .12s}
+}
+@media (max-width:420px){
+  .plate{padding:16px 14px 18px}
+  .btn{flex:1 1 100%}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <div class="brand"><i>U4</i><span data-i18n="brand">Fan-Kit</span></div>
+    <div class="lang" role="group" aria-label="Sprache / Language">
+      <button type="button" id="lang-de" data-lang="de" aria-pressed="true">DE</button>
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+
+  <div class="hero">
+    <img src="assets/cover.jpg" width="640" height="640" alt="Cover: ein U-Bahn-Eingang in Wien, darüber der Schriftzug „wann sehen wir uns wieder?“">
+    <div class="sign">
+      <div class="line"><b>Laurin.</b><span data-i18n="line">Erste Single · 10. September 2026</span></div>
+      <h1>wann sehen wir uns wieder?</h1>
+      <div class="by"><span data-i18n="by">Ein Lied von</span> <strong>Laurin.</strong> · 1:35</div>
+    </div>
+  </div>
+
+  <p class="intro" data-i18n-html="intro">Ein Freund hat sein erstes Lied veröffentlicht. Diese Seite zeigt, was du als Fan in <em>fünf Minuten</em> tun kannst, damit es wirklich gehört wird. Alles hier ist echt und erlaubt. Nichts davon ist ein Trick.</p>
+
+  <div class="plates">
+
+    <!-- 1 Hören -->
+    <section class="plate" id="listen">
+      <header><h2 data-i18n="h_listen">Hören</h2><span class="arrow">→</span></header>
+      <p data-i18n="p_listen">Am besten ganz. Es sind 95 Sekunden.</p>
+      <div class="btns">
+        <a class="btn" href="https://open.spotify.com/track/0yYpnpuC1tMqjxgXjMV0Vj" target="_blank" rel="noopener" data-i18n="b_spotify">Auf Spotify öffnen</a>
+        <a class="btn ghost" id="l-apple" href="#" target="_blank" rel="noopener" hidden>Apple Music</a>
+        <a class="btn ghost" id="l-soundcloud" href="#" target="_blank" rel="noopener" hidden>SoundCloud</a>
+      </div>
+      <p class="small"><a href="spotify:track:0yYpnpuC1tMqjxgXjMV0Vj" data-i18n="app_open">Direkt in der Spotify-App öffnen</a></p>
+    </section>
+
+    <!-- 2 Speichern -->
+    <section class="plate" id="save">
+      <header><h2 data-i18n="h_save">Speichern</h2><span class="arrow">→</span></header>
+      <p data-i18n="p_save"><strong>Das zählt am meisten.</strong> Spotify schaut nicht nur, wie oft ein Lied läuft, sondern ob Leute es behalten wollen.</p>
+      <ol class="steps">
+        <li data-i18n="s_save1">Song öffnen und auf das Plus tippen (Herz auf älteren Versionen).</li>
+        <li data-i18n="s_save2">Dann über die drei Punkte in eine eigene Playlist legen. Irgendeine. Deine.</li>
+      </ol>
+      <div class="btns">
+        <a class="btn" href="https://open.spotify.com/track/0yYpnpuC1tMqjxgXjMV0Vj" target="_blank" rel="noopener" data-i18n="b_save">Song öffnen und speichern</a>
+        <a class="btn ghost" id="l-playlist" href="#" target="_blank" rel="noopener" hidden data-i18n="b_playlist">Fan-Playlist folgen</a>
+      </div>
+    </section>
+
+    <!-- 3 Folgen -->
+    <section class="plate" id="follow">
+      <header><h2 data-i18n="h_follow">Folgen</h2><span class="arrow">→</span></header>
+      <p data-i18n="p_follow">Wer Laurin. folgt, bekommt das nächste Lied automatisch im Release Radar. Für einen neuen Künstler ist jeder Follower ein Signal.</p>
+      <div class="btns">
+        <a class="btn" href="https://open.spotify.com/artist/1a9C2omo10kDc5F6UIW4gV" target="_blank" rel="noopener" data-i18n="b_follow">Laurin. auf Spotify folgen</a>
+        <a class="btn ghost" id="l-instagram" href="#" target="_blank" rel="noopener" hidden>Instagram</a>
+      </div>
+    </section>
+
+    <!-- 4 Anschauen (hidden until a YouTube link exists) -->
+    <section class="plate" id="watch" hidden>
+      <header><h2 data-i18n="h_watch">Anschauen</h2><span class="arrow">→</span></header>
+      <p data-i18n="p_watch">Auf YouTube anschauen, liken, einen Kommentar dalassen. Kommentare wiegen dort mehr als Klicks.</p>
+      <div class="btns">
+        <a class="btn" id="l-youtube" href="#" target="_blank" rel="noopener" data-i18n="b_watch">Auf YouTube ansehen</a>
+      </div>
+    </section>
+
+    <!-- 5 Kaufen (hidden until a shop link exists) -->
+    <section class="plate" id="buy" hidden>
+      <header><h2 data-i18n="h_buy">Kaufen</h2><span class="arrow">→</span></header>
+      <p data-i18n="p_buy">Ein Kauf zahlt Laurin. ungefähr so viel wie ein paar hundert Streams. Wenn du dem Lied etwas geben willst, ist das der direkte Weg.</p>
+      <div class="btns">
+        <a class="btn" id="l-bandcamp" href="#" target="_blank" rel="noopener" hidden>Bandcamp</a>
+        <a class="btn ghost" id="l-itunes" href="#" target="_blank" rel="noopener" hidden>iTunes</a>
+      </div>
+    </section>
+
+    <!-- 6 Teilen -->
+    <section class="plate" id="share">
+      <header><h2 data-i18n="h_share">Weitersagen</h2><span class="arrow">→</span></header>
+      <p data-i18n="p_share">Schick es einer Person, die es mögen wird. Eine reicht. Neue Hörer sind das, was ein Lied wachsen lässt.</p>
+      <div class="btns">
+        <button class="btn" type="button" id="b-native" hidden data-i18n="b_native">Teilen …</button>
+        <a class="btn" id="b-wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn ghost" id="b-tg" href="#" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn ghost" id="b-mail" href="#">E-Mail</a>
+        <button class="btn ghost" type="button" id="b-copy" data-i18n="b_copy">Link kopieren</button>
+      </div>
+      <p class="small" id="copy-note" hidden data-i18n="copied">Kopiert.</p>
+    </section>
+
+    <!-- 7 Was nicht hilft -->
+    <section class="plate warn" id="dont">
+      <header><h2 data-i18n="h_dont">Was nicht hilft</h2><span class="arrow" aria-hidden="true">✕</span></header>
+      <p data-i18n="p_dont1">Bitte nicht: das Lied stumm in Dauerschleife laufen lassen, Bots, Scripts, gekaufte Streams. Spotify erkennt so etwas, streicht die Streams und kann im schlimmsten Fall das Lied sperren. Das trifft Laurin., nicht dich.</p>
+      <p data-i18n-html="p_dont2">Spotify sagt es selbst: Fans, die ein Lied künstlich in Schleife laufen lassen oder Scripts benutzen, soll man <a href="https://artists.spotify.com/artificial-streaming" target="_blank" rel="noopener">aktiv davon abhalten</a>. Was zählt: echtes Hören, speichern, in Playlists legen, weitersagen.</p>
+    </section>
+
+    <!-- 8 Fan-Board -->
+    <section class="plate board" id="board">
+      <header><h2 data-i18n="h_board">Fan-Board</h2><span class="arrow" aria-hidden="true">★</span></header>
+      <p class="hint" data-i18n="p_board">Hak ab, was du gemacht hast. Bleibt auf diesem Gerät gespeichert.</p>
+      <div class="check">
+        <label><input type="checkbox" id="chk-listen"><span data-i18n="c_listen">Gehört</span></label>
+        <label><input type="checkbox" id="chk-save"><span data-i18n="c_save">Gespeichert</span></label>
+        <label><input type="checkbox" id="chk-playlist"><span data-i18n="c_playlist">In eine Playlist gelegt</span></label>
+        <label><input type="checkbox" id="chk-follow"><span data-i18n="c_follow">Laurin. gefolgt</span></label>
+        <label><input type="checkbox" id="chk-share"><span data-i18n="c_share">Weitergesagt</span></label>
+      </div>
+      <div class="tally" id="tally" hidden><b id="stars">0</b><span data-i18n="tally">Fans haben einen Stern dagelassen</span></div>
+      <div class="btns">
+        <a class="btn spray" id="b-star" href="https://github.com/Jul352mf/laurin-fan-kit" target="_blank" rel="noopener" data-i18n="b_star">★ Stern dalassen: ich bin dabei</a>
+      </div>
+      <p class="small" data-i18n="star_hint">Der Stern liegt auf GitHub, wo diese Seite lebt. Ein Konto dort ist gratis. Kein Muss.</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <div data-i18n-html="f1">Eine Fanseite, gebaut von Jules. Kein offizielles Angebot von Laurin.</div>
+    <div><a href="stats.html" data-i18n="f_stats">Öffentliche Zahlen</a> · <a href="https://github.com/Jul352mf/laurin-fan-kit" target="_blank" rel="noopener" data-i18n="f_src">Quelltext auf GitHub</a> · <span data-i18n="f_pr">Verbesserungen willkommen.</span></div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  const KIT = "https://jul352mf.github.io/laurin-fan-kit/";
+  const SPOT = "https://open.spotify.com/track/0yYpnpuC1tMqjxgXjMV0Vj";
+  const REPO = "Jul352mf/laurin-fan-kit";
+
+  const T = {
+    de: {
+      brand:"Fan-Kit", line:"Erste Single · 10. September 2026", by:"Ein Lied von",
+      intro:"Ein Freund hat sein erstes Lied veröffentlicht. Diese Seite zeigt, was du als Fan in <em>fünf Minuten</em> tun kannst, damit es wirklich gehört wird. Alles hier ist echt und erlaubt. Nichts davon ist ein Trick.",
+      h_listen:"Hören", p_listen:"Am besten ganz. Es sind 95 Sekunden.", b_spotify:"Auf Spotify öffnen", app_open:"Direkt in der Spotify-App öffnen",
+      h_save:"Speichern", p_save:"<strong>Das zählt am meisten.</strong> Spotify schaut nicht nur, wie oft ein Lied läuft, sondern ob Leute es behalten wollen.",
+      s_save1:"Song öffnen und auf das Plus tippen (Herz auf älteren Versionen).", s_save2:"Dann über die drei Punkte in eine eigene Playlist legen. Irgendeine. Deine.",
+      b_save:"Song öffnen und speichern", b_playlist:"Fan-Playlist folgen",
+      h_follow:"Folgen", p_follow:"Wer Laurin. folgt, bekommt das nächste Lied automatisch im Release Radar. Für einen neuen Künstler ist jeder Follower ein Signal.", b_follow:"Laurin. auf Spotify folgen",
+      h_watch:"Anschauen", p_watch:"Auf YouTube anschauen, liken, einen Kommentar dalassen. Kommentare wiegen dort mehr als Klicks.", b_watch:"Auf YouTube ansehen",
+      h_buy:"Kaufen", p_buy:"Ein Kauf zahlt Laurin. ungefähr so viel wie ein paar hundert Streams. Wenn du dem Lied etwas geben willst, ist das der direkte Weg.",
+      h_share:"Weitersagen", p_share:"Schick es einer Person, die es mögen wird. Eine reicht. Neue Hörer sind das, was ein Lied wachsen lässt.", b_native:"Teilen …", b_copy:"Link kopieren", copied:"Kopiert.",
+      h_dont:"Was nicht hilft",
+      p_dont1:"Bitte nicht: das Lied stumm in Dauerschleife laufen lassen, Bots, Scripts, gekaufte Streams. Spotify erkennt so etwas, streicht die Streams und kann im schlimmsten Fall das Lied sperren. Das trifft Laurin., nicht dich.",
+      p_dont2:"Spotify sagt es selbst: Fans, die ein Lied künstlich in Schleife laufen lassen oder Scripts benutzen, soll man <a href=\"https://artists.spotify.com/artificial-streaming\" target=\"_blank\" rel=\"noopener\">aktiv davon abhalten</a>. Was zählt: echtes Hören, speichern, in Playlists legen, weitersagen.",
+      h_board:"Fan-Board", p_board:"Hak ab, was du gemacht hast. Bleibt auf diesem Gerät gespeichert.",
+      c_listen:"Gehört", c_save:"Gespeichert", c_playlist:"In eine Playlist gelegt", c_follow:"Laurin. gefolgt", c_share:"Weitergesagt",
+      tally:"Fans haben einen Stern dagelassen", b_star:"★ Stern dalassen: ich bin dabei", star_hint:"Der Stern liegt auf GitHub, wo diese Seite lebt. Ein Konto dort ist gratis. Kein Muss.",
+      f1:"Eine Fanseite, gebaut von Jules. Kein offizielles Angebot von Laurin.", f_stats:"Öffentliche Zahlen", f_src:"Quelltext auf GitHub", f_pr:"Verbesserungen willkommen.",
+      share_text:"Hör dir das mal an: „wann sehen wir uns wieder?“ von Laurin. Sein erstes Lied. Wenn es dir gefällt: speichern, nicht nur hören. Alles dazu hier: " + KIT + " Direkt auf Spotify: " + SPOT,
+      share_subject:"wann sehen wir uns wieder? von Laurin."
+    },
+    en: {
+      brand:"Fan kit", line:"First single · 10 September 2026", by:"A song by",
+      intro:"A friend has released his first song. This page shows what you, as a fan, can do in <em>five minutes</em> so it actually gets heard. Everything here is real and allowed. None of it is a trick.",
+      h_listen:"Listen", p_listen:"All the way through if you can. It is 95 seconds.", b_spotify:"Open on Spotify", app_open:"Open in the Spotify app",
+      h_save:"Save", p_save:"<strong>This counts the most.</strong> Spotify does not just count plays. It watches whether people want to keep a song.",
+      s_save1:"Open the song and tap the plus (a heart on older versions).", s_save2:"Then use the three dots to add it to a playlist of your own. Any playlist. Yours.",
+      b_save:"Open and save the song", b_playlist:"Follow the fan playlist",
+      h_follow:"Follow", p_follow:"Followers get his next song automatically in Release Radar. For a new artist, every follower is a signal.", b_follow:"Follow Laurin. on Spotify",
+      h_watch:"Watch", p_watch:"Watch it on YouTube, like it, leave a comment. Comments weigh more than clicks there.", b_watch:"Watch on YouTube",
+      h_buy:"Buy", p_buy:"One purchase pays Laurin. about as much as a few hundred streams. If you want to give the song something, this is the direct way.",
+      h_share:"Pass it on", p_share:"Send it to one person who will like it. One is enough. New listeners are what make a song grow.", b_native:"Share …", b_copy:"Copy link", copied:"Copied.",
+      h_dont:"What does not help",
+      p_dont1:"Please do not: loop the song on mute, use bots or scripts, buy streams. Spotify detects this, removes the streams and in the worst case can take the song down. That hits Laurin., not you.",
+      p_dont2:"Spotify says it themselves: fans looping a song artificially or using scripts is behaviour an artist should <a href=\"https://artists.spotify.com/artificial-streaming\" target=\"_blank\" rel=\"noopener\">actively discourage</a>. What counts: real listens, saves, playlists, passing it on.",
+      h_board:"Fan board", p_board:"Tick what you have done. Stays on this device.",
+      c_listen:"Listened", c_save:"Saved", c_playlist:"Added to a playlist", c_follow:"Followed Laurin.", c_share:"Passed it on",
+      tally:"fans have left a star", b_star:"★ Leave a star: count me in", star_hint:"The star lives on GitHub, where this page lives. An account there is free. Optional.",
+      f1:"A fan page, built by Jules. Not an official Laurin. site.", f_stats:"Public numbers", f_src:"Source on GitHub", f_pr:"Improvements welcome.",
+      share_text:"Have a listen to this: “wann sehen wir uns wieder?” by Laurin. His first song. If you like it: save it, do not just stream it. Everything here: " + KIT + " Straight to Spotify: " + SPOT,
+      share_subject:"wann sehen wir uns wieder? by Laurin."
+    }
+  };
+
+  function ls(get, key, val){ try{ if(get) return localStorage.getItem(key); localStorage.setItem(key,val);}catch(e){ return null; } }
+
+  let lang = "de";
+  function applyLang(l){
+    lang = T[l] ? l : "de";
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-i18n]").forEach(el=>{ const k=el.getAttribute("data-i18n"); if(T[lang][k]!=null) el.textContent=T[lang][k]; });
+    document.querySelectorAll("[data-i18n-html]").forEach(el=>{ const k=el.getAttribute("data-i18n-html"); if(T[lang][k]!=null) el.innerHTML=T[lang][k]; });
+    document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.lang===lang)));
+    wireShare();
+    ls(false,"lang",lang);
+  }
+  document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>applyLang(b.dataset.lang)));
+
+  function wireShare(){
+    const text = T[lang].share_text, subj = T[lang].share_subject;
+    document.getElementById("b-wa").href = "https://wa.me/?text=" + encodeURIComponent(text);
+    document.getElementById("b-tg").href = "https://t.me/share/url?url=" + encodeURIComponent(KIT) + "&text=" + encodeURIComponent(text);
+    document.getElementById("b-mail").href = "mailto:?subject=" + encodeURIComponent(subj) + "&body=" + encodeURIComponent(text);
+  }
+  const nat = document.getElementById("b-native");
+  if (navigator.share) { nat.hidden = false; nat.addEventListener("click", async ()=>{ try{ await navigator.share({title:T[lang].share_subject, text:T[lang].share_text, url:KIT}); }catch(e){} }); }
+  document.getElementById("b-copy").addEventListener("click", async ()=>{
+    const note = document.getElementById("copy-note");
+    try { await navigator.clipboard.writeText(KIT); note.hidden=false; setTimeout(()=>note.hidden=true, 1800); } catch(e) { window.prompt("Link:", KIT); }
+  });
+
+  // checklist, per device
+  document.querySelectorAll(".check input").forEach(cb=>{
+    const saved = ls(true, cb.id); if (saved==="1") cb.checked = true;
+    cb.addEventListener("change", ()=> ls(false, cb.id, cb.checked?"1":"0"));
+  });
+
+  // optional platforms from config.json (page is complete without it)
+  fetch("config.json", {cache:"no-cache"}).then(r=>r.ok?r.json():null).then(cfg=>{
+    if(!cfg) return;
+    const L = cfg.links||{}, A = cfg.artist||{};
+    const set = (id, url)=>{ const el=document.getElementById(id); if(el && url){ el.href=url; el.hidden=false; return true; } return false; };
+    set("l-apple", L.apple_music); set("l-soundcloud", L.soundcloud); set("l-playlist", L.community_playlist); set("l-instagram", A.instagram);
+    if (set("l-youtube", L.youtube)) document.getElementById("watch").hidden = false;
+    const b1 = set("l-bandcamp", L.bandcamp), b2 = set("l-itunes", L.itunes);
+    if (b1 || b2) document.getElementById("buy").hidden = false;
+  }).catch(()=>{});
+
+  // star tally from GitHub, cached one hour, hidden on failure
+  (function stars(){
+    const key="stars", now=Date.now();
+    try { const c = JSON.parse(ls(true,key)||"null"); if (c && now-c.ts < 3600e3) return show(c.n); } catch(e){}
+    fetch("https://api.github.com/repos/"+REPO, {headers:{Accept:"application/vnd.github+json"}}).then(r=>r.ok?r.json():null).then(j=>{
+      if(!j || typeof j.stargazers_count!=="number") return;
+      ls(false,key,JSON.stringify({ts:now,n:j.stargazers_count})); show(j.stargazers_count);
+    }).catch(()=>{});
+    function show(n){ document.getElementById("stars").textContent = String(n); document.getElementById("tally").hidden = false; }
+  })();
+
+  applyLang(ls(true,"lang") || ((navigator.language||"de").toLowerCase().startsWith("de") ? "de" : "en"));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wann sehen wir uns wieder? · Zahlen</title>
+<meta name="description" content="Öffentliche Zahlen zu „wann sehen wir uns wieder?“ von Laurin., täglich gesammelt.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231E7A46'/%3E%3Ctext x='16' y='22' font-family='Arial Black,Arial' font-size='16' font-weight='900' fill='white' text-anchor='middle'%3EU4%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+:root{--ground:#ECEEE9;--plate:#FBFBF8;--ink:#17191A;--muted:#5E6660;--u4:#1E7A46;--u4-ink:#FFFFFF;--spray:#D63A9C;--line:#C9CDC6;--grid:#E2E5DF;
+  --shadow:0 1px 0 rgba(23,25,26,.08),0 8px 24px -12px rgba(22,59,41,.25);
+  --display:"Archivo Black","Arial Black",Impact,sans-serif;--body:"Atkinson Hyperlegible","Segoe UI",system-ui,-apple-system,sans-serif;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#121614;--plate:#1B211D;--ink:#ECEDE8;--muted:#9AA39C;--u4:#3FA36B;--u4-ink:#0E1A13;--spray:#E86BBE;--line:#2C332E;--grid:#242B26;--shadow:0 1px 0 rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);color-scheme:dark}}
+:root[data-theme="dark"]{--ground:#121614;--plate:#1B211D;--ink:#ECEDE8;--muted:#9AA39C;--u4:#3FA36B;--u4-ink:#0E1A13;--spray:#E86BBE;--line:#2C332E;--grid:#242B26;--shadow:0 1px 0 rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;padding-inline:16px;padding-block:0 64px}
+a{color:inherit}
+.wrap{max-width:640px;margin:0 auto}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px 10px;font-size:13px;color:var(--muted)}
+.top .brand{display:flex;align-items:center;gap:8px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;text-decoration:none}
+.top .brand i{display:inline-grid;place-items:center;width:26px;height:26px;background:var(--u4);color:var(--u4-ink);font-family:var(--display);font-style:normal;font-size:12px}
+.sign{background:var(--plate);box-shadow:var(--shadow);border-top:6px solid var(--u4)}
+.sign .line{background:var(--u4);color:var(--u4-ink);padding:6px 14px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.sign h1{margin:0;padding:18px 16px 6px;font-family:var(--display);font-weight:400;font-size:clamp(26px,6.5vw,38px);line-height:1.05;text-wrap:balance}
+.sign p{margin:0;padding:0 16px 18px;color:var(--muted);font-size:15px}
+.note{margin:22px 0 8px;color:var(--muted);font-size:15px;max-width:62ch}
+.cards{display:grid;gap:14px;margin-top:14px}
+.card{background:var(--plate);box-shadow:var(--shadow);padding:16px 18px 18px;display:grid;gap:8px}
+.card h2{margin:0;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.num{display:flex;align-items:baseline;gap:12px;font-variant-numeric:tabular-nums;flex-wrap:wrap}
+.num b{font-family:var(--display);font-weight:400;font-size:40px;line-height:1}
+.num span{color:var(--muted);font-size:14px}
+.num .up{color:var(--u4)}
+svg{width:100%;height:auto;display:block;max-width:100%}
+.empty{color:var(--muted);font-size:15px;margin:0}
+footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a class="brand" href="./"><i>U4</i><span>Fan-Kit</span></a><span id="stand">Stand: noch keine Messung</span></div>
+  <div class="sign">
+    <div class="line">Öffentliche Zahlen</div>
+    <h1>wann sehen wir uns wieder?</h1>
+    <p>Laurin. · täglich um 08:00 (Wien) gesammelt, automatisch, aus öffentlichen Quellen.</p>
+  </div>
+  <p class="note">Was hier steht, kann jeder nachlesen: monatliche Hörer auf Laurins Spotify-Künstlerseite, Sterne auf GitHub (das Fan-Board), YouTube-Zahlen sobald es ein Video gibt. Spotify gibt kleinen Apps seit Februar 2026 keine offiziellen Statistiken mehr heraus, und die Wiedergaben eines Lieds sind nicht öffentlich. Monatliche Hörer sind das ehrlichste Mass, das offen liegt.</p>
+  <div class="cards" id="cards"><p class="empty" id="empty">Noch keine Messungen. Die erste kommt beim nächsten Durchlauf.</p></div>
+  <footer><a href="./">Zurück zum Fan-Kit</a> · <a href="https://github.com/Jul352mf/laurin-fan-kit/blob/main/data/samples.jsonl" target="_blank" rel="noopener">Rohdaten</a> · Eine Fanseite, gebaut von Jules.</footer>
+</div>
+<script>
+(function(){
+  const LABEL = {
+    "spotify.monthly_listeners": {t:"Monatliche Hörer auf Spotify", u:"Hörer"},
+    "github.stars": {t:"Fans mit Stern (GitHub)", u:"Sterne"},
+    "youtube.views": {t:"YouTube-Aufrufe", u:"Aufrufe"},
+    "youtube.likes": {t:"YouTube-Likes", u:"Likes"},
+    "youtube.comments": {t:"YouTube-Kommentare", u:"Kommentare"}
+  };
+  const ORDER = Object.keys(LABEL);
+  const fmt = n => new Intl.NumberFormat("de-CH").format(n);
+  const dfmt = ts => new Date(ts).toLocaleDateString("de-CH",{day:"2-digit",month:"2-digit"});
+
+  fetch("data/samples.jsonl",{cache:"no-cache"}).then(r=>r.ok?r.text():"").then(txt=>{
+    const rows = txt.split("\n").filter(Boolean).map(l=>{try{return JSON.parse(l)}catch(e){return null}}).filter(Boolean);
+    if(!rows.length) return;
+    const by = {};
+    rows.forEach(r=>{ const k=r.source+"."+r.metric; (by[k] ||= []).push(r); });
+    const last = rows.map(r=>r.ts).sort().at(-1);
+    document.getElementById("stand").textContent = "Stand: " + new Date(last).toLocaleString("de-CH",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"});
+    const host = document.getElementById("cards");
+    document.getElementById("empty").remove();
+    const keys = ORDER.filter(k=>by[k]).concat(Object.keys(by).filter(k=>!ORDER.includes(k)));
+    keys.forEach(k=>{
+      const series = by[k].sort((a,b)=>a.ts<b.ts?-1:1);
+      const first = series[0].value, latest = series.at(-1).value, delta = latest-first;
+      const meta = LABEL[k] || {t:k, u:""};
+      const card = document.createElement("section"); card.className="card";
+      const trend = series.length>1
+        ? ' · <span class="'+(delta>=0?"up":"")+'">'+(delta>=0?"+":"")+fmt(delta)+'</span> seit '+dfmt(series[0].ts)
+        : " · erste Messung";
+      card.innerHTML = '<h2>'+meta.t+'</h2><div class="num"><b>'+fmt(latest)+'</b><span>'+meta.u+trend+'</span></div>' + (series.length>1 ? chart(series) : "");
+      host.appendChild(card);
+    });
+  }).catch(()=>{});
+
+  function chart(series){
+    const W=600, H=160, L=52, R=14, T=12, B=26;
+    const vals = series.map(s=>s.value), min = Math.min(...vals), max = Math.max(...vals);
+    const lo = min===max ? min-1 : min, hi = min===max ? max+1 : max;
+    const x = i => L + (W-L-R) * (series.length===1 ? 0 : i/(series.length-1));
+    const y = v => T + (H-T-B) * (1 - (v-lo)/(hi-lo));
+    const pts = series.map((s,i)=>x(i).toFixed(1)+","+y(s.value).toFixed(1));
+    const ticks = [lo, (lo+hi)/2, hi].map(v=>Math.round(v));
+    const grid = ticks.map(v=>'<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y(v).toFixed(1)+'" y2="'+y(v).toFixed(1)+'" stroke="var(--grid)" stroke-width="1"/>'+
+      '<text x="'+(L-6)+'" y="'+(y(v)+4).toFixed(1)+'" text-anchor="end" font-size="11" fill="var(--muted)" font-family="inherit">'+fmt(v)+'</text>').join("");
+    const area = 'M'+x(0).toFixed(1)+','+(H-B).toFixed(1)+' L'+pts.join(" L")+' L'+x(series.length-1).toFixed(1)+','+(H-B).toFixed(1)+' Z';
+    const lastP = pts.at(-1).split(",");
+    return '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Verlauf">'+grid+
+      '<path d="'+area+'" fill="var(--u4)" fill-opacity=".10"/>'+
+      '<polyline points="'+pts.join(" ")+'" fill="none" stroke="var(--u4)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>'+
+      '<circle cx="'+lastP[0]+'" cy="'+lastP[1]+'" r="4.5" fill="var(--spray)"/>'+
+      '<text x="'+L+'" y="'+(H-8)+'" font-size="11" fill="var(--muted)" font-family="inherit">'+dfmt(series[0].ts)+'</text>'+
+      '<text x="'+(W-R)+'" y="'+(H-8)+'" text-anchor="end" font-size="11" fill="var(--muted)" font-family="inherit">'+dfmt(series.at(-1).ts)+'</text>'+
+      '</svg>';
+  }
+})();
+</script>
+</body>
+</html>
