@@ -149,6 +149,10 @@ footer a{color:var(--muted)}
       <div class="btns">
         <a class="btn" href="https://open.spotify.com/track/0yYpnpuC1tMqjxgXjMV0Vj" target="_blank" rel="noopener" data-i18n="b_spotify">Auf Spotify öffnen</a>
         <a class="btn ghost" id="l-apple" href="#" target="_blank" rel="noopener" hidden>Apple Music</a>
+        <a class="btn ghost" id="l-ytmusic" href="#" target="_blank" rel="noopener" hidden>YouTube Music</a>
+        <a class="btn ghost" id="l-amazon" href="#" target="_blank" rel="noopener" hidden>Amazon Music</a>
+        <a class="btn ghost" id="l-deezer" href="#" target="_blank" rel="noopener" hidden>Deezer</a>
+        <a class="btn ghost" id="l-tidal" href="#" target="_blank" rel="noopener" hidden>Tidal</a>
         <a class="btn ghost" id="l-soundcloud" href="#" target="_blank" rel="noopener" hidden>SoundCloud</a>
       </div>
       <p class="small"><a href="spotify:track:0yYpnpuC1tMqjxgXjMV0Vj" data-i18n="app_open">Direkt in der Spotify-App öffnen</a></p>
@@ -181,7 +185,7 @@ footer a{color:var(--muted)}
     <!-- 4 Anschauen (hidden until a YouTube link exists) -->
     <section class="plate" id="watch" hidden>
       <header><h2 data-i18n="h_watch">Anschauen</h2><span class="arrow">→</span></header>
-      <p data-i18n="p_watch">Auf YouTube anschauen, liken, einen Kommentar dalassen. Kommentare wiegen dort mehr als Klicks.</p>
+      <p data-i18n="p_watch">Auf YouTube anschauen und liken. Ganz durchlaufen lassen zählt dort mehr als ein Klick. Kommentare sind bei diesem automatisch erstellten Video aus.</p>
       <div class="btns">
         <a class="btn" id="l-youtube" href="#" target="_blank" rel="noopener" data-i18n="b_watch">Auf YouTube ansehen</a>
       </div>
@@ -193,7 +197,7 @@ footer a{color:var(--muted)}
       <p data-i18n="p_buy">Ein Kauf zahlt Laurin. ungefähr so viel wie ein paar hundert Streams. Wenn du dem Lied etwas geben willst, ist das der direkte Weg.</p>
       <div class="btns">
         <a class="btn" id="l-bandcamp" href="#" target="_blank" rel="noopener" hidden>Bandcamp</a>
-        <a class="btn ghost" id="l-itunes" href="#" target="_blank" rel="noopener" hidden>iTunes</a>
+        <a class="btn ghost" id="l-itunes" href="#" target="_blank" rel="noopener" hidden>iTunes Store</a>
       </div>
     </section>
 
@@ -260,7 +264,7 @@ footer a{color:var(--muted)}
       s_save1:"Song öffnen und auf das Plus tippen (Herz auf älteren Versionen).", s_save2:"Dann über die drei Punkte in eine eigene Playlist legen. Irgendeine. Deine.",
       b_save:"Song öffnen und speichern", b_playlist:"Fan-Playlist folgen",
       h_follow:"Folgen", p_follow:"Wer Laurin. folgt, bekommt das nächste Lied automatisch im Release Radar. Für einen neuen Künstler ist jeder Follower ein Signal.", b_follow:"Laurin. auf Spotify folgen",
-      h_watch:"Anschauen", p_watch:"Auf YouTube anschauen, liken, einen Kommentar dalassen. Kommentare wiegen dort mehr als Klicks.", b_watch:"Auf YouTube ansehen",
+      h_watch:"Anschauen", p_watch:"Auf YouTube anschauen und liken. Ganz durchlaufen lassen zählt dort mehr als ein Klick. Kommentare sind bei diesem automatisch erstellten Video aus.", b_watch:"Auf YouTube ansehen",
       h_buy:"Kaufen", p_buy:"Ein Kauf zahlt Laurin. ungefähr so viel wie ein paar hundert Streams. Wenn du dem Lied etwas geben willst, ist das der direkte Weg.",
       h_share:"Weitersagen", p_share:"Schick es einer Person, die es mögen wird. Eine reicht. Neue Hörer sind das, was ein Lied wachsen lässt.", b_native:"Teilen …", b_copy:"Link kopieren", copied:"Kopiert.",
       h_dont:"Was nicht hilft",
@@ -281,7 +285,7 @@ footer a{color:var(--muted)}
       s_save1:"Open the song and tap the plus (a heart on older versions).", s_save2:"Then use the three dots to add it to a playlist of your own. Any playlist. Yours.",
       b_save:"Open and save the song", b_playlist:"Follow the fan playlist",
       h_follow:"Follow", p_follow:"Followers get his next song automatically in Release Radar. For a new artist, every follower is a signal.", b_follow:"Follow Laurin. on Spotify",
-      h_watch:"Watch", p_watch:"Watch it on YouTube, like it, leave a comment. Comments weigh more than clicks there.", b_watch:"Watch on YouTube",
+      h_watch:"Watch", p_watch:"Watch it on YouTube and like it. Letting it play through counts more than a click there. Comments are off on this auto-generated upload.", b_watch:"Watch on YouTube",
       h_buy:"Buy", p_buy:"One purchase pays Laurin. about as much as a few hundred streams. If you want to give the song something, this is the direct way.",
       h_share:"Pass it on", p_share:"Send it to one person who will like it. One is enough. New listeners are what make a song grow.", b_native:"Share …", b_copy:"Copy link", copied:"Copied.",
       h_dont:"What does not help",
@@ -334,7 +338,8 @@ footer a{color:var(--muted)}
     if(!cfg) return;
     const L = cfg.links||{}, A = cfg.artist||{};
     const set = (id, url)=>{ const el=document.getElementById(id); if(el && url){ el.href=url; el.hidden=false; return true; } return false; };
-    set("l-apple", L.apple_music); set("l-soundcloud", L.soundcloud); set("l-playlist", L.community_playlist); set("l-instagram", A.instagram);
+    set("l-apple", L.apple_music); set("l-ytmusic", L.youtube_music); set("l-amazon", L.amazon_music); set("l-deezer", L.deezer); set("l-tidal", L.tidal);
+    set("l-soundcloud", L.soundcloud); set("l-playlist", L.community_playlist); set("l-instagram", A.instagram);
     if (set("l-youtube", L.youtube)) document.getElementById("watch").hidden = false;
     const b1 = set("l-bandcamp", L.bandcamp), b2 = set("l-itunes", L.itunes);
     if (b1 || b2) document.getElementById("buy").hidden = false;

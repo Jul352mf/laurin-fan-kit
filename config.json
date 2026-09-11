@@ -11,12 +11,17 @@
     "duration_s": 95
   },
   "links": {
-    "apple_music": "",
-    "youtube": "",
+    "smartlink": "https://www.intellijend.com/l/wann-sehen-wir-uns-wieder-tree",
+    "apple_music": "https://music.apple.com/at/album/wann-sehen-wir-uns-wieder-single/6807633810",
+    "itunes": "https://music.apple.com/at/album/wann-sehen-wir-uns-wieder-single/6807633810?app=itunes",
+    "youtube": "https://www.youtube.com/watch?v=NtNYTZe5iks",
     "youtube_video_id": "",
+    "youtube_music": "https://music.youtube.com/playlist?list=OLAK5uy_lVKLzX9FleaJEvvK3RjWrqEee7L-gnjM8",
+    "amazon_music": "https://music.amazon.com/albums/B0HHHRGHGD",
+    "deezer": "https://www.deezer.com/track/4260707031",
+    "tidal": "https://tidal.com/album/557675797",
     "soundcloud": "",
     "bandcamp": "",
-    "itunes": "",
     "community_playlist": ""
   },
   "kit": {
@@ -25,6 +30,7 @@
   },
   "sampler": {
     "spotify_monthly_listeners": true,
-    "github_stars": true
+    "github_stars": true,
+    "note": "youtube_video_id stays empty until the YOUTUBE_API_KEY Actions secret exists; the watch link above is enough for the page."
   }
 }
