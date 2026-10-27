@@ -54,3 +54,5 @@
 {"ts":"2026-10-25T06:04:14Z","source":"github","metric":"stars","value":0}
 {"ts":"2026-10-26T06:05:53Z","source":"spotify","metric":"monthly_listeners","value":1100}
 {"ts":"2026-10-26T06:05:53Z","source":"github","metric":"stars","value":0}
+{"ts":"2026-10-27T06:04:38Z","source":"spotify","metric":"monthly_listeners","value":1000}
+{"ts":"2026-10-27T06:04:38Z","source":"github","metric":"stars","value":0}
